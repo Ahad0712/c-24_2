@@ -69,7 +69,7 @@ function draw() {
     player.spt.y=height-75;
   }
 
-  if(logGroup1.isTouching(palyer.spt)){
+  if(logGroup1.isTouching(player.spt)){
     player.spt.x=player.spt.x-3;
   }else if((player.spt.y>height-1550 && player.spt.y<height-1300) ||
   (player.spt.y<height-500 && player.spt.y>height-850) ||
