@@ -10,7 +10,7 @@ function preload()
 {
  carAnimation1=loadAnimation("images/car1.png");
  carAnimation2=loadAnimation("images/car2.png");
- playerAnimation=loadAnimation("images/Player-3.png");
+ playerAnimation=loadAnimation("images/Player-03.png");
  logAnimation=loadAnimation("images/log2.png");
  cityImage=loadAnimation("images/city2.png");
 }
@@ -21,7 +21,7 @@ function setup() {
   logGroup1 = new Group();
 
   city=createSprite(width/2,-1500);
-  city.addAnimatoin("city",cityImage);
+  city.addAnimation("city",cityImage);
   
   for(var i=0;i<6;i++){
     var bottomGrass1 = createSprite(683,height-50-(i*400),width,grassHeight);
@@ -76,15 +76,15 @@ function draw() {
   (player.spt.y>height) ||
   (player.spt.x<0) ||
   (player.spt.x>width)){
-    player.spt.y.x=width/2;
-    player.spt.y=heigth/-75;
+    player.spt.x=width/2;
+    player.spt.y=height-75;
   }
 
   if(city.isTouching(player.spt)){
     gameState="Win";
   }
           
-  if(gameState==="WIn"){
+   if(gameState==="Win"){
     stroke("black");
     fill("blue");
     textSize(40);
