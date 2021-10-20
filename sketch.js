@@ -97,13 +97,13 @@ function draw() {
 }
 
 function keyPressed(){
-  if(keyDown("up")){
+  if(keyCode===UP_ARROW){
     player.move(0,-2);
-  }else if(keyDown("down")){
+  }else if(keyCode === DOWN_ARROW){
     player.move(0,2);
-  }else if(keyDown("left")){
+  }else if(keyCode === LEFT_ARROW){
     player.move(-2,0);
-  }else if(keyDown("right")){
+  }else if(keyCode === RIGHT_ARROW){
     player.move(2,0);
   }
 }
